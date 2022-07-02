@@ -124,9 +124,10 @@ local ui = {
                 if opened == false then
                     local DropdownFrame = Instance.new("Frame",NewFrame)
                     DropdownFrame.BorderSizePixel = 0
+                    DropdownFrame.Name = "Dropdown"
                     DropdownFrame.Position = UDim2.new(0,0,1,0)
                     for i = 1,10 do
-                        DropdownFrame.Size = UDim2.new(1,0,(dropdowncount + 0.1)/10,0)
+                        DropdownFrame.Size = UDim2.new(1,0,(dropdowncount + 0.2)/10,0)
                     end
                     spawn(function()
                         while wait() do
@@ -138,8 +139,19 @@ local ui = {
                         end
                     end)
 
-                    for i,v in pairs(Data.Dropdowns) do
+                    local added = 0
 
+                    for i,v in pairs(Data.Dropdowns) do
+                        if v.Type == "Toggle" then
+                            local Frame = Instance.new("Frame",DropdownFrame)
+                            Frame.Size = UDim2.new(1,0,1/dropdowncount,0)
+                            Frame.Position = UDim2.new(0,0,1/dropdowncount,0)
+                            added=added+1
+                        end
+                    end
+                else
+                    if NewFrame:FindFirstChild("Dropdown") then
+                        NewFrame.Dropdown:Destroy()
                     end
                 end
 
