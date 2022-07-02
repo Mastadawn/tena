@@ -121,7 +121,7 @@ local ui = {
                         end
                     end
                 end
-                task.wait()
+                task.wait(4)
                 debounce = false
             end
 		end)
