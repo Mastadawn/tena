@@ -2,8 +2,9 @@ Tabs = {}
 ModuleData = {}
 
 ScreenGUI = Instance.new("ScreenGui",game.CoreGui)
-SCFrame = Instance.new("Frame",ScreenGUI)
-SCFrame.Size = UDim2.new(1,0,1,0)
+SCFrame = Instance.new("ScrollingFrame",ScreenGUI)
+SCFrame.Size = UDim2.new(1,0,1.1,0)
+SCFrame.Position = UDim2.new(0,0,-0.1,0)
 SCFrame.BackgroundTransparency = 1
 
 _G.Tabs = Tabs
@@ -22,10 +23,10 @@ local ui = {
 		local TabTitle = Instance.new("TextLabel",NewTab)
 		local Image = Instance.new("ImageLabel",NewTab)
 		table.insert(Tabs,NewTab)
-		NewTab.Size = UDim2.new(0.115,0,0.04/2, 0)
+		NewTab.Size = UDim2.new(0.115,0,0.04/2.2, 0)
 		NewTab.BackgroundColor3 = Color3.fromRGB(30,30,30)
 		NewTab.BorderSizePixel = 0
-		NewTab.Position = UDim2.new(0,0,-0.035,0) + UDim2.new(0.13 * GetTabs(),0,0,0)
+		NewTab.Position = UDim2.new(-0.09,0,0.05,0) + UDim2.new(0.13 * GetTabs(),0,0,0)
 		TabTitle.Text = " "..TabName
 		TabTitle.Font = Enum.Font.GothamBold
 		TabTitle.BackgroundTransparency = 1
