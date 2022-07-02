@@ -124,7 +124,7 @@ local ui = {
                     DropdownFrame.BorderSizePixel = 0
                     DropdownFrame.Name = "Dropdown"
                     DropdownFrame.Position = UDim2.new(0,0,1,0)
-                    DropdownFrame.Size = UDim2.new(1,0,dropdowncount + 0.22,0)
+                    DropdownFrame.Size = UDim2.new(1,0,dropdowncount + 0.2,0)
                     spawn(function()
                         while wait() do
                             if Data.Status == false then
@@ -141,13 +141,24 @@ local ui = {
                         if v.Type == "Toggle" then
                             local Frame = Instance.new("Frame",DropdownFrame)
                             local ToggleButton = Instance.new("TextButton",Frame)
+                            local slidebar = Instance.new("Frame",Frame)
+                            local slideball = Instance.new("Frame",slidebar)
+                            local corner1 = Instance.new("UICorner",sliderbar)
+                            local corner2 = Instance.new("UICorner",sliderbar)
+                            slideball.Size = UDim2.new(0.3,0,1.3,0)
+                            slideball.AnchorPoint = Vector2.new(0.5,0.5)
+                            slideball.Position = UDim2.new(0,0,0.5,0)
+                            corner1.CornerRadius = Vector2.new(10,10)
+                            corner2.CornerRadius = Vector2.new(50,50)
+                            sliderbar.Size = UDim2.new(0.1,0,0.3,0)
+                            sliderbar.Position = UDim2.new(0.75,0,0.35,0)
                             Frame.Size = UDim2.new(1,0,1/dropdowncount,0)
                             Frame.Position = UDim2.new(0,0,added*1/dropdowncount,0)
                             Frame.BackgroundTransparency = 1
                             ToggleButton.Text = " "..v.Name
                             ToggleButton.Size = UDim2.new(1,0,1,0)
                             ToggleButton.TextXAlignment = "Left"
-                            ToggleButton.Font = Enum.Font.GothamBold
+                            ToggleButton.Font = Enum.Font.Gotham
                             ToggleButton.BackgroundTransparency = 1
                             ToggleButton.TextColor3 = Color3.fromRGB(255,255,255)
                             ToggleButton.TextSize = ToggleButton.AbsoluteSize.X * 0.08
