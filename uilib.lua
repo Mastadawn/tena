@@ -8,7 +8,7 @@ List = {"a"}
 ScreenGUI = Instance.new("ScreenGui",game.CoreGui)
 SCFrame = Instance.new("Frame",ScreenGUI)
 SCFrame.Size = UDim2.new(1,0,2,0)
-SCFrame.Position = UDim2.new(0,0,0.002,0)
+SCFrame.Position = UDim2.new(-0.3,0,0.002,0)
 SCFrame.BackgroundTransparency = 1
 
 _G.Tabs = Tabs
