@@ -1,4 +1,4 @@
-print("uwu")
+
 Tabs = {}
 ModuleData = {}
 List = {"a"}
@@ -124,7 +124,7 @@ local ui = {
                     DropdownFrame.BorderSizePixel = 0
                     DropdownFrame.Name = "Dropdown"
                     DropdownFrame.Position = UDim2.new(0,0,1,0)
-                    DropdownFrame.Size = UDim2.new(1,0,dropdowncount + 0.15,0)
+                    DropdownFrame.Size = UDim2.new(1,0,dropdowncount + 0.2,0)
                     spawn(function()
                         while wait() do
                             if Data.Status == false then
