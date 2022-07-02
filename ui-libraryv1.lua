@@ -127,6 +127,7 @@ local ui = {
                     DropdownFrame.Name = "Dropdown"
                     DropdownFrame.Position = UDim2.new(0,0,1,0)
                     for i = 1,10 do
+                        task.wait()
                         DropdownFrame.Size = UDim2.new(1,0,(dropdowncount + 0.2)/10,0)
                     end
                     spawn(function()
