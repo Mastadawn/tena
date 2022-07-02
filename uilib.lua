@@ -83,10 +83,12 @@ local ui = {
 		Button.MouseButton2Click:Connect(function()
             if debounce == false then
                 debounce = true
-                for i=1,45 do
-                    task.wait()
-                    arrow.Rotation = arrow.Rotation + 4
-                end
+                spawn(function()
+                    for i=1,45 do
+                        task.wait()
+                        arrow.Rotation = arrow.Rotation + 4
+                    end
+                end)
                 local dropdowncount = 0
                 for i,v in pairs(Data.Dropdowns) do
                     dropdowncount = dropdowncount + 1
@@ -95,19 +97,23 @@ local ui = {
                     if v:IsA("Frame") then
                         if v.Position.Y.Scale > NewFrame.Position.Y.Scale then
                             if opened == false then
-                		opened = true
                                 print("opening")
-                                for i=1,10 do
-                                    task.wait()
-                                    v.Position = v.Position + UDim2.new(0,0,dropdowncount/10,0)
-                                end
+                                opened = true
+                                spawn(function()
+                                    for i=1,10 do
+                                        task.wait()
+                                        v.Position = v.Position + UDim2.new(0,0,dropdowncount/10,0)
+                                    end
+                                end)
                             else
-                		opened = false
                                 print("closing")
-                                for i=1,10 do
-                                    task.wait()
-                                    v.Position = v.Position - UDim2.new(0,0,dropdowncount/10,0)
-                                end
+                                opened = false
+                                spawn(function()
+                                    for i=1,10 do
+                                        task.wait()
+                                        v.Position = v.Position - UDim2.new(0,0,dropdowncount/10,0)
+                                    end
+                                end)
                             end
                         end
                     end
