@@ -120,11 +120,29 @@ local ui = {
                         end
                     end
                 end
-					if opened == true then
-						opened = false
-					else
-						opened = true
-					end
+
+                local DropdownFrame = Instance.new("Frame",NewFrame)
+                DropdownFrame.Size = UDim2.new(1,0,dropdowncount,0)
+                DropdownFrame.BorderSizePixel = 0
+                spawn(function()
+                    while wait() do
+                        if Data.Status == false then
+                            DropdownFrame.BackgroundColor3 = Color3.fromRGB(45,46,49)
+                        else
+                            DropdownFrame.BackgroundColor3 = Color3.fromRGB(0,95,145)
+                        end
+                    end
+                end)
+
+                for i,v in pairs(Data.Dropdowns) do
+
+                end
+
+				if opened == true then
+					opened = false
+				else
+					opened = true
+				end
                 task.wait(.4)
                 debounce = false
             end
