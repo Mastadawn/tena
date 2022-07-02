@@ -1,5 +1,3 @@
-
-
 Tabs = {}
 ModuleData = {}
 
@@ -25,7 +23,7 @@ local ui = {
 		local TabTitle = Instance.new("TextLabel",NewTab)
 		local Image = Instance.new("ImageLabel",NewTab)
 		table.insert(Tabs,NewTab)
-		NewTab.Size = UDim2.new(0.115,0,0.04/2, 0)
+		NewTab.Size = UDim2.new(0.115,0,0.04/1.5, 0)
 		NewTab.BackgroundColor3 = Color3.fromRGB(30,30,30)
 		NewTab.BorderSizePixel = 0
 		NewTab.Position = UDim2.new(-0.015,0,0.05,0) + UDim2.new(0.13 * GetTabs(),0,0,0)
