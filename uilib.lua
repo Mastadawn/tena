@@ -93,7 +93,7 @@ local ui = {
                 end
                 for i,v in pairs(Data.Tab:GetChildren()) do
                     if v:IsA("Frame") then
-                        if v.Position.Y.Scale < NewFrame.Position.Y.Scale then
+                        if v.Position.Y.Scale > NewFrame.Position.Y.Scale then
                             if opened == false then
                                 for i=1,10 do
                                     task.wait()
