@@ -123,9 +123,11 @@ local ui = {
 
                 if opened == false then
                     local DropdownFrame = Instance.new("Frame",NewFrame)
-                    DropdownFrame.Size = UDim2.new(1,0,dropdowncount + 0.1,0)
                     DropdownFrame.BorderSizePixel = 0
                     DropdownFrame.Position = UDim2.new(0,0,1,0)
+                    for i = 1,10 do
+                        DropdownFrame.Size = UDim2.new(1,0,(dropdowncount + 0.1)/10,0)
+                    end
                     spawn(function()
                         while wait() do
                             if Data.Status == false then
