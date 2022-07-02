@@ -141,7 +141,7 @@ local ui = {
                         if v.Type == "Toggle" then
                             local Frame = Instance.new("Frame",DropdownFrame)
                             Frame.Size = UDim2.new(1,0,1/dropdowncount,0)
-                            Frame.Position = UDim2.new(0,0,1/dropdowncount,0)
+                            Frame.Position = UDim2.new(0,0,added*1/dropdowncount,0)
                             added=added+1
                         end
                     end
