@@ -3,7 +3,7 @@ ModuleData = {}
 
 ScreenGUI = Instance.new("ScreenGui",game.CoreGui)
 SCFrame = Instance.new("Frame",ScreenGUI)
-SCFrame.Size = UDim2.new(1,0,1.1,0)
+SCFrame.Size = UDim2.new(1,0,1.5,0)
 SCFrame.BackgroundTransparency = 1
 
 _G.Tabs = Tabs
