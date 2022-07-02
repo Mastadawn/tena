@@ -1,4 +1,4 @@
-warn("aa")
+
 Tabs = {}
 ModuleData = {}
 List = {"a"}
@@ -145,6 +145,7 @@ local ui = {
                             Frame.Position = UDim2.new(0,0,added*1/dropdowncount,0)
                             Frame.BackgroundTransparency = 1
                             ToggleButton.Text = " "..v.Name
+                            ToggleButton.Size = UDim2.new(1,0,1,0)
                             ToggleButton.TextXAlignment = "Left"
                             ToggleButton.Font = Enum.Font.GothamBold
                             ToggleButton.TextColor3 = Color3.fromRGB(255,255,255)
