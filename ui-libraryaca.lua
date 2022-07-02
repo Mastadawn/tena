@@ -161,7 +161,7 @@ local ui = {
                             ToggleButton.Font = Enum.Font.Gotham
                             ToggleButton.BackgroundTransparency = 1
                             ToggleButton.TextColor3 = Color3.fromRGB(255,255,255)
-                            ToggleButton.TextSize = ToggleButton.AbsoluteSize.X * 0.08
+                            ToggleButton.TextSize = ToggleButton.AbsoluteSize.X * 0.09
                             added=added+1
                         end
                     end
