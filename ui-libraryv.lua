@@ -1,4 +1,4 @@
-
+warn("aa")
 Tabs = {}
 ModuleData = {}
 List = {"a"}
@@ -124,7 +124,7 @@ local ui = {
                     DropdownFrame.BorderSizePixel = 0
                     DropdownFrame.Name = "Dropdown"
                     DropdownFrame.Position = UDim2.new(0,0,1,0)
-                    DropdownFrame.Size = UDim2.new(1,0,dropdowncount + 0.2,0)
+                    DropdownFrame.Size = UDim2.new(1,0,dropdowncount + 0.15,0)
                     spawn(function()
                         while wait() do
                             if Data.Status == false then
@@ -140,8 +140,15 @@ local ui = {
                     for i,v in pairs(Data.Dropdowns) do
                         if v.Type == "Toggle" then
                             local Frame = Instance.new("Frame",DropdownFrame)
+                            local ToggleButton = Instance.new("TextButton",Frame)
                             Frame.Size = UDim2.new(1,0,1/dropdowncount,0)
                             Frame.Position = UDim2.new(0,0,added*1/dropdowncount,0)
+                            Frame.BackgroundTransparency = 1
+                            ToggleButton.Text = " "..v.Name
+                            ToggleButton.TextXAlignment = "Left"
+                            ToggleButton.Font = Enum.Font.GothamBold
+                            ToggleButton.TextColor3 = Color3.fromRGB(255,255,255)
+                            ToggleButton.TextSize = ToggleButton.AbsoluteSize.X * 0.1
                             added=added+1
                         end
                     end
