@@ -139,9 +139,9 @@ local ui = {
 
                     for i,v in pairs(Data.Dropdowns) do
                         if v.Type == "Toggle" then
-                            local Frame = Instance.new("Frame",DropdownFrame)
+                            local TFrame = Instance.new("Frame",DropdownFrame)
                             local ToggleButton = Instance.new("TextButton",Frame)
-                            local slidebar = Instance.new("Frame",Frame)
+                            local slidebar = Instance.new("Frame",TFrame)
                             local slideball = Instance.new("Frame",slidebar)
                             local corner1 = Instance.new("UICorner",sliderbar)
                             local corner2 = Instance.new("UICorner",sliderbar)
@@ -152,9 +152,9 @@ local ui = {
                             corner2.CornerRadius = UDim.new(50,50)
                             sliderbar.Size = UDim2.new(0.1,0,0.3,0)
                             sliderbar.Position = UDim2.new(0.75,0,0.35,0)
-                            Frame.Size = UDim2.new(1,0,1/dropdowncount,0)
-                            Frame.Position = UDim2.new(0,0,added*1/dropdowncount,0)
-                            Frame.BackgroundTransparency = 1
+                            TFrame.Size = UDim2.new(1,0,1/dropdowncount,0)
+                            TFrame.Position = UDim2.new(0,0,added*1/dropdowncount,0)
+                            TFrame.BackgroundTransparency = 1
                             ToggleButton.Text = " "..v.Name
                             ToggleButton.Size = UDim2.new(1,0,1,0)
                             ToggleButton.TextXAlignment = "Left"
