@@ -1,4 +1,4 @@
-
+print("uwu")
 Tabs = {}
 ModuleData = {}
 List = {"a"}
@@ -148,8 +148,9 @@ local ui = {
                             ToggleButton.Size = UDim2.new(1,0,1,0)
                             ToggleButton.TextXAlignment = "Left"
                             ToggleButton.Font = Enum.Font.GothamBold
+                            ToggleButton.BackgroundTransparency = 1
                             ToggleButton.TextColor3 = Color3.fromRGB(255,255,255)
-                            ToggleButton.TextSize = ToggleButton.AbsoluteSize.X * 0.1
+                            ToggleButton.TextSize = ToggleButton.AbsoluteSize.X * 0.08
                             added=added+1
                         end
                     end
