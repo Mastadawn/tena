@@ -95,11 +95,13 @@ local ui = {
                     if v:IsA("Frame") then
                         if v.Position.Y.Scale > NewFrame.Position.Y.Scale then
                             if opened == false then
+				print("opening")
                                 for i=1,10 do
                                     task.wait()
                                     v.Position = v.Position + UDim2.new(0,0,dropdowncount/10,0)
                                 end
                             else
+				print("closing")
                                 for i=1,10 do
                                     task.wait()
                                     v.Position = v.Position - UDim2.new(0,0,dropdowncount/10,0)
