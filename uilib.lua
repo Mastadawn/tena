@@ -1,5 +1,6 @@
 Tabs = {}
 ModuleData = {}
+List = {"a"}
 
 ScreenGUI = Instance.new("ScreenGui",game.CoreGui)
 SCFrame = Instance.new("Frame",ScreenGUI)
