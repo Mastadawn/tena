@@ -102,7 +102,6 @@ local ui = {
                         if v.Position.Y.Scale > NewFrame.Position.Y.Scale then
                             if opened == false then
                                 print("opening")
-                                opened = true
                                 spawn(function()
                                     for i=1,10 do
                                         task.wait()
@@ -111,7 +110,6 @@ local ui = {
                                 end)
                             else
                                 print("closing")
-                                opened = false
                                 spawn(function()
                                     for i=1,10 do
                                         task.wait()
@@ -122,6 +120,11 @@ local ui = {
                         end
                     end
                 end
+					if opened == true then
+						opened = false
+					else
+						opened = true
+					end
                 task.wait(.4)
                 debounce = false
             end
