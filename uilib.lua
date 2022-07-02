@@ -1,11 +1,10 @@
-warn("Client connected to ui-lib")
 Tabs = {}
 ModuleData = {}
 
 ScreenGUI = Instance.new("ScreenGui",game.CoreGui)
 SCFrame = Instance.new("ScrollingFrame",ScreenGUI)
 SCFrame.Size = UDim2.new(1,0,1.1,0)
-SCFrame.Position = UDim2.new(0,0,-0.1,0)
+SCFrameSCFrame.Position = UDim2.new(0,0,-0.1,0)
 SCFrame.BackgroundTransparency = 1
 
 _G.Tabs = Tabs
@@ -79,7 +78,17 @@ local ui = {
 				NewFrame.BackgroundColor3 = Color3.fromRGB(54,56,60)
 			end
 		end)
+        local debounce = false
 		Button.MouseButton2Click:Connect(function()
+            if debounce == false then
+                debounce = true
+                for i=1,45 do
+                    task.wait()
+                    arrow.Rotation = arrow.Rotation + 4
+                end
+                task.wait()
+                debounce = false
+            end
 		end)
 	end,
 }
