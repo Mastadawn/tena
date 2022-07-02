@@ -107,6 +107,7 @@ local ui = {
                                     v.Position = v.Position - UDim2.new(0,0,dropdowncount/10,0)
                                 end
                             end
+				opened = not opened 
                         end
                     end
                 end
